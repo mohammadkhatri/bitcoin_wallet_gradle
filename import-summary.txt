@@ -1,0 +1,89 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From IntigrationNew:
+* proguard-project.txt
+From WalletNew:
+* ic_launcher-web.png
+* proguard-project.txt
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In IntigrationNew:
+* AndroidManifest.xml => intigrationNew/src/main/AndroidManifest.xml
+* assets/ => intigrationNew/src/main/assets/
+* libs/android-support-v13.jar => intigrationNew/libs/android-support-v13.jar
+* libs/commons-codec-1.3.jar => intigrationNew/libs/commons-codec-1.3.jar
+* libs/commons-logging-1.1.1.jar => intigrationNew/libs/commons-logging-1.1.1.jar
+* libs/httpclient-4.0.1.jar => intigrationNew/libs/httpclient-4.0.1.jar
+* libs/httpcore-4.0.1.jar => intigrationNew/libs/httpcore-4.0.1.jar
+* libs/json-20080701.jar => intigrationNew/libs/json-20080701.jar
+* libs/opengl-api-gl1.1-android-2.1_r1.jar => intigrationNew/libs/opengl-api-gl1.1-android-2.1_r1.jar
+* libs/xmlParserAPIs-2.6.2.jar => intigrationNew/libs/xmlParserAPIs-2.6.2.jar
+* libs/xpp3-1.1.4c.jar => intigrationNew/libs/xpp3-1.1.4c.jar
+* res/ => intigrationNew/src/main/res/
+* src/ => intigrationNew/src/main/java/
+In WalletNew:
+* AndroidManifest.xml => walletNew/src/main/AndroidManifest.xml
+* assets/ => walletNew/src/main/assets/
+* libs/android-support-v13.jar => walletNew/libs/android-support-v13.jar
+* libs/annotations-4.1.1.4.jar => walletNew/libs/annotations-4.1.1.4.jar
+* libs/apktool-lib-1.4.4-3.jar => walletNew/libs/apktool-lib-1.4.4-3.jar
+* libs/bitcoinj-core-0.12.2.jar => walletNew/libs/bitcoinj-core-0.12.2.jar
+* libs/commons-codec-1.3.jar => walletNew/libs/commons-codec-1.3.jar
+* libs/commons-logging-1.1.1.jar => walletNew/libs/commons-logging-1.1.1.jar
+* libs/core-1.51.0.0.jar => walletNew/libs/core-1.51.0.0.jar
+* libs/core-3.1.0.jar => walletNew/libs/core-3.1.0.jar
+* libs/guava-16.0.1.jar => walletNew/libs/guava-16.0.1.jar
+* libs/hamcrest-core-1.3.jar => walletNew/libs/hamcrest-core-1.3.jar
+* libs/httpclient-4.0.1.jar => walletNew/libs/httpclient-4.0.1.jar
+* libs/httpcore-4.0.1.jar => walletNew/libs/httpcore-4.0.1.jar
+* libs/jcip-annotations-1.0.jar => walletNew/libs/jcip-annotations-1.0.jar
+* libs/json-20080701.jar => walletNew/libs/json-20080701.jar
+* libs/jsr305-2.0.1.jar => walletNew/libs/jsr305-2.0.1.jar
+* libs/junit-4.11.jar => walletNew/libs/junit-4.11.jar
+* libs/logback-android-classic-1.1.1-3.jar => walletNew/libs/logback-android-classic-1.1.1-3.jar
+* libs/logback-android-core-1.1.1-3.jar => walletNew/libs/logback-android-core-1.1.1-3.jar
+* libs/opengl-api-gl1.1-android-2.1_r1.jar => walletNew/libs/opengl-api-gl1.1-android-2.1_r1.jar
+* libs/orchid-1.0.jar => walletNew/libs/orchid-1.0.jar
+* libs/protobuf-java-2.5.0.jar => walletNew/libs/protobuf-java-2.5.0.jar
+* libs/scrypt-1.4.0.jar => walletNew/libs/scrypt-1.4.0.jar
+* libs/slf4j-api-1.7.7.jar => walletNew/libs/slf4j-api-1.7.7.jar
+* libs/xmlParserAPIs-2.6.2.jar => walletNew/libs/xmlParserAPIs-2.6.2.jar
+* libs/xpp3-1.1.4c.jar => walletNew/libs/xpp3-1.1.4c.jar
+* lint.xml => walletNew/lint.xml
+* res/ => walletNew/src/main/res/
+* src/ => walletNew/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
